@@ -61,7 +61,7 @@ export default function TransactionForm({ addTransaction }) {
             className="w-full p-2 border rounded-md"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="e.g., Netflix Subscription"
+            placeholder="e.g., Netflix"
           />
         </div>
         

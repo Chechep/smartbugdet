@@ -1,5 +1,5 @@
 export const CATEGORIES = [
-  'Rent', 'Food', 'Transportation', 'Entertainment',
+  'Housing', 'Food', 'Transportation', 'Entertainment',
   'Utilities', 'Healthcare', 'Subscriptions', 'Other'
 ];
 

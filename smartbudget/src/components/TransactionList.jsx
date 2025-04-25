@@ -38,7 +38,7 @@ export default function TransactionList({ transactions, deleteTransaction }) {
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <button
                     onClick={() => deleteTransaction(transaction.id)}
-                    className="text-red-600 hover:text-red-900"
+                    className="text-red-600 hover:text-red-200 font- py-1 px-2 border border-red-500 rounded-md transition duration-200 ease-in-out"
                   >
                     Delete
                   </button>
