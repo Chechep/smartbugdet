@@ -68,7 +68,6 @@ export default function TransactionForm({ addTransaction }) {
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Amount</label>
           <div className="relative">
-            <span className="absolute left-3 top-2">Ksh </span>
             <input
               type="number"
               step="0.01"
@@ -76,7 +75,7 @@ export default function TransactionForm({ addTransaction }) {
               className="w-full p-2 pl-6 border rounded-md"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="     0.00"
+              placeholder="Ksh 0.00"
             />
           </div>
         </div>

@@ -10,6 +10,11 @@ function App() {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   
+  // Toggle between light and dark mode
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
   // Calculate balance
   const balance = transactions.reduce((total, transaction) => {
     return transaction.type === 'income' 
