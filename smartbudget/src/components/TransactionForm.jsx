@@ -32,7 +32,7 @@ export default function TransactionForm({ addTransaction }) {
   };
   
   return (
-    <div>
+    <div className='AddTransactionForm'>
       <h2 className="text-xl font-bold mb-4">Add Transaction</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -68,7 +68,7 @@ export default function TransactionForm({ addTransaction }) {
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Amount</label>
           <div className="relative">
-            <span className="absolute left-3 top-2">$</span>
+            <span className="absolute left-3 top-2">Ksh</span>
             <input
               type="number"
               step="0.01"

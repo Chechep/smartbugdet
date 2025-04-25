@@ -21,14 +21,17 @@ export default function Dashboard({
     .reduce((sum, t) => sum + parseFloat(t.amount), 0);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {/* Left sidebar - Add Transaction Form */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="max-w-3xl mx-auto p-4 space-y-6">
+      
+      {/* Top - Add Transaction Form */}
+      <div className="bg-white p-6 rounded-2xl shadow-md">
+        <h2 className="text-2xl font-bold text-center text-blue-600 mb-4">Add Transaction</h2>
         <TransactionForm addTransaction={addTransaction} />
       </div>
       
-      {/* Main content - Charts */}
-      <div className="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+      {/* Bottom - Month Selector + Financial Summary + Chart */}
+      <div className="bg-white p-6 rounded-2xl shadow-md space-y-6">
+        
         <MonthSelector 
           currentMonth={currentMonth}
           currentYear={currentYear}

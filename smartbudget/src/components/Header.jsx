@@ -4,7 +4,7 @@ export default function Header({ balance }) {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">SmartBudget</h1>
           <div className="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold">
-            Balance: ${balance.toFixed(2)}
+            Balance: Ksh {balance.toFixed(2)}
           </div>
         </div>
       </header>
