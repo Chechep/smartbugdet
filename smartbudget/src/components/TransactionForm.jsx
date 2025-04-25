@@ -61,14 +61,14 @@ export default function TransactionForm({ addTransaction }) {
             className="w-full p-2 border rounded-md"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="e.g., Groceries"
+            placeholder="e.g., Netflix Subscription"
           />
         </div>
         
         <div className="mb-4">
           <label className="block text-gray-700 mb-2">Amount</label>
           <div className="relative">
-            <span className="absolute left-3 top-2">Ksh</span>
+            <span className="absolute left-3 top-2">Ksh </span>
             <input
               type="number"
               step="0.01"
@@ -76,7 +76,7 @@ export default function TransactionForm({ addTransaction }) {
               className="w-full p-2 pl-6 border rounded-md"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="0.00"
+              placeholder="     0.00"
             />
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function TransactionForm({ addTransaction }) {
         <button
           type="submit"
           className={`w-full py-2 px-4 rounded-md text-white font-bold ${
-            type === 'expense' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
+            type === 'expense' ? 'bg-red-500 hover:bg-red-700' : 'bg-green-500 hover:bg-green-700'
           }`}
         >
           Add {type === 'expense' ? 'Expense' : 'Income'}

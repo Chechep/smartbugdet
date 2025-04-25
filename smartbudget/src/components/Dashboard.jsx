@@ -25,7 +25,6 @@ export default function Dashboard({
       
       {/* Top - Add Transaction Form */}
       <div className="bg-white p-6 rounded-2xl shadow-md">
-        <h2 className="text-2xl font-bold text-center text-blue-600 mb-4">Add Transaction</h2>
         <TransactionForm addTransaction={addTransaction} />
       </div>
       
