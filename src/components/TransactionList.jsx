@@ -30,7 +30,7 @@ export default function TransactionList({ transactions, deleteTransaction }) {
                 <td className={`px-6 py-4 whitespace-nowrap font-medium ${
                   transaction.type === 'income' ? 'text-green-600' : 'text-red-600'
                 }`}>
-                  {transaction.type === 'income' ? '+' : '-'}${parseFloat(transaction.amount).toFixed(2)}
+                  {transaction.type === 'income' ? '+' : '-'}Ksh {parseFloat(transaction.amount).toFixed(2)}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {transaction.isRecurring ? 'Yes' : 'No'}

@@ -6,7 +6,7 @@ export default function MonthSelector({ currentMonth, currentYear, goToPreviousM
       <div className="flex items-center">
         <button 
           onClick={goToPreviousMonth}
-          className="bg-gray-200 p-2 rounded-l-md hover:bg-gray-300"
+          className="bg-gray-200 p-2 rounded-l-md hover:bg-gray-500"
         >
           &lt;
         </button>
@@ -15,7 +15,7 @@ export default function MonthSelector({ currentMonth, currentYear, goToPreviousM
         </span>
         <button 
           onClick={goToNextMonth}
-          className="bg-gray-200 p-2 rounded-r-md hover:bg-gray-300"
+          className="bg-gray-200 p-2 rounded-r-md hover:bg-gray-500"
         >
           &gt;
         </button>
