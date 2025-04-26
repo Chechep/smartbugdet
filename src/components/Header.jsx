@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function Header({ balance }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -9,10 +10,15 @@ export default function Header({ balance }) {
     document.documentElement.classList.toggle('dark');
   };
 
+  // Toggle profile menu
+  const toggleProfileMenu = () => {
+    setIsProfileMenuOpen(!isProfileMenuOpen);
+  };
+
   return (
     <header className="bg-blue-600 text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-      <button 
+      <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full hover:bg-blue-900 transition-colors"
             aria-label="Toggle dark mode"
@@ -33,7 +39,30 @@ export default function Header({ balance }) {
         
         <div className="flex items-center space-x-4">
           <div className="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold">
-            Balance: ${balance.toFixed(2)}
+            Balance: Ksh {balance.toFixed(2)}
+          </div>
+          {/* Profile button with dropdown */}
+          <div className="relative">
+            <button
+              onClick={toggleProfileMenu}
+              className="flex items-center p-2 rounded-full hover:bg-blue-700 transition-colors"
+              aria-label="Open profile menu"
+            >
+              {/* User avatar/icon */}
+              <div className="w-8 h-8 rounded-full bg-white text-blue-600 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </button>
+            
+            {/* Profile dropdown menu */}
+            {isProfileMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign In</a>
+              </div>
+            )}
           </div>
         </div>
       </div>
