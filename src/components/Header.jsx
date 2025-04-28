@@ -30,7 +30,7 @@ export default function Header({ balance }) {
       <div className="container mx-auto flex justify-between items-center">
       <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-blue-900 transition-colors"
+            className="p-2 rounded-full hover:bg-blue-800 transition-colors"
             aria-label="Toggle dark mode"
           >
             {isDarkMode ? (
@@ -45,7 +45,7 @@ export default function Header({ balance }) {
               </svg>
             )}
           </button>
-        <h1 className="text-2xl font-bold items-center">SmartBudget</h1>   
+        <h1 className="text-2xl font-bold items-center">SmartBudget</h1>
         <div className="flex items-center space-x-4">
           <div className="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold">
             Balance: Ksh {balance.toFixed(2)}

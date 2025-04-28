@@ -1,4 +1,4 @@
-SMARTBUDGET
+# SMARTBUDGET
 PROBLEM STATEMENT
 SmartBudget is a simple react powered budgeting app that helps users take control of their income and expenses.
 
@@ -14,6 +14,6 @@ Visual Charts: Pie or bar charts to see where your money’s going.
 
 TECHNOLOGIES USED
 React
-Tailwind css
+Tailwindcss
 Firebase
 JSON
