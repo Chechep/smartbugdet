@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'; // Add useEffect to the import
+import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
-import { signInWithGoogle, signOutUser } from '../hooks/useAuth'; // Import the signIn and signOut functions
-
+import { signInWithGoogle, signOutUser } from '../hooks/useAuth';
 export default function Header({ balance }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -46,8 +45,7 @@ export default function Header({ balance }) {
               </svg>
             )}
           </button>
-        <h1 className="text-2xl font-bold items-center">SmartBudget</h1>
-        
+        <h1 className="text-2xl font-bold items-center">SmartBudget</h1>   
         <div className="flex items-center space-x-4">
           <div className="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold">
             Balance: Ksh {balance.toFixed(2)}
