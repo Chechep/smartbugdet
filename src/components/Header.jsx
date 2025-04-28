@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Add useEffect to the import
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase';
+import { signInWithGoogle, signOutUser } from '../hooks/useAuth'; // Import the signIn and signOut functions
 
 export default function Header({ balance }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
   
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -65,6 +76,28 @@ export default function Header({ balance }) {
               </div>
             )}
           </div>
+          <div>
+        {user ? (
+          <>
+            {/* User is signed in */}
+            <button onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}>
+              Profile
+            </button>
+            {isProfileMenuOpen && (
+              <div>
+                <span>Welcome {user.displayName}</span>
+                <button onClick={signOutUser}>Sign Out</button>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            {/* No user signed in */}
+            <button onClick={signInWithGoogle}>Sign In</button>
+          </>
+        )}
+      </div>
+
         </div>
       </div>
     </header>
