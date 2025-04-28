@@ -1,6 +1,6 @@
 export const CATEGORIES = [
   'Housing', 'Food', 'Transportation', 'Entertainment',
-  'Utilities', 'Healthcare', 'Subscriptions', 'Other'
+  'Utilities', 'Healthcare', 'Subscriptions', 'Others'
 ];
 
 export const MONTH_NAMES = [
@@ -10,5 +10,5 @@ export const MONTH_NAMES = [
 
 export const CHART_COLORS = [
   'green', 'blue', 'red', 'orange',
-  'purple', 'pink', 'aqua', 'lime',
+  'purple', 'pink', 'aqua', 'black',
 ];
