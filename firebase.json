@@ -14,3 +14,11 @@
     ]
   }
 }
+{
+  "hosting": {
+    "site": "smartbudget-6701a-71524",
+
+    "public": "public",
+    ...
+  }
+}
