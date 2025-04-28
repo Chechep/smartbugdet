@@ -15,7 +15,11 @@
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff"
+    "theme_color": "#38bdf8",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "scope": ".",
+    "description": "Track your income and expenses with SmartBudget!",
+    "lang": "en-US"
   }
   
