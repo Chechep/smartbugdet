@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "smartbudget-6701a-71524",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -12,13 +13,5 @@
         "destination": "/index.html"
       }
     ]
-  }
-}
-{
-  "hosting": {
-    "site": "smartbudget-6701a-71524",
-
-    "public": "public",
-    ...
   }
 }
